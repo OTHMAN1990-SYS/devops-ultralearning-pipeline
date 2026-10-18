@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-pipeline-app
+  labels:
+    app: devops-pipeline
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devops-pipeline
+  template:
+    metadata:
+      labels:
+        app: devops-pipeline
+    spec:
+      containers:
+      - name: nginx-app
+        image: ghcr.io/othman1990-sys/devops-ultralearning-pipeline:latest
+        ports:
+        - containerPort: 80
+
