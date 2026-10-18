@@ -27,4 +27,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository }}:latest
+        tags: ghcr.io/othman1990-sys/devops-ultralearning-pipeline:latest
